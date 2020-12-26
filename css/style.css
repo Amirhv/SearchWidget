@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+* {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(90deg, #7d5fff, #4ab7c6);
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search .input {
+    background: white;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border: none;
+    transition: width 0.6s ease;
+}
+
+.search .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    color: #000000;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.search .input:focus,
+.search .btn:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 300px;
+}
+
+.search.active .btn {
+    top: 0;
+    /* inputWidth / btnWidth = 83.34% */
+    left: 83.34%;
+}
